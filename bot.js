@@ -39,6 +39,11 @@ client.on('message', async message => {
         client.sendMessage(message.from, await MessageMedia.fromUrl(meme.url))
         break
       case 'covid':
+        //if (!args[0]) return message.reply('you need to enter a country name')
+        //const url = `https://coronavirus-19-api.herokuapp.com/countries/${args}`
+        //const info = await axios(url)
+        //.then(res => res.data)
+        //message.reply(`INDIA has a total of : + \*\*${info.cases}\*\*\ + covid cases ` ,)
         if (!args) return message.reply('you need to enter a country name')
         const url = `https://coronavirus-19-api.herokuapp.com/countries/${args}`
         const info  = await axios(url)
